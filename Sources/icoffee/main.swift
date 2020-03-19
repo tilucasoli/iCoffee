@@ -1,6 +1,6 @@
 import TelegramBotSDK
 
-let bot = TelegramBot(token: "1113029263:AAF4jiXjYNqkOwkEahQz0YBXBRt7NpJQRNA")
+let bot = TelegramBot(token: "Bot Token")
 let router = Router(bot: bot)
 
 print("Lucas")
