@@ -1,6 +1,6 @@
 import TelegramBotSDK
 
-let bot = TelegramBot(token: "Bot Token")
+let bot = TelegramBot(token: "Bot_Token")
 let router = Router(bot: bot)
 
 print("Lucas")
@@ -14,6 +14,12 @@ router["greet"] = { context in
 router["start"] = { context in
     guard let from = context.message?.from else { return false }
     context.respondAsync("Welcome, \(from.firstName)!")
+    return true
+}
+
+router["lucas"] = { context in
+    guard let from = context.message?.from else { return false }
+    context.respondAsync("vc é lindo, \(from.firstName)!")
     return true
 }
 
