@@ -17,11 +17,7 @@ router["start"] = { context in
     return true
 }
 
-router["lucas"] = { context in
-    guard let from = context.message?.from else { return false }
-    context.respondAsync("vc é lindo, \(from.firstName)!")
-    return true
-}
+
 
 router[.newChatMembers] = { context in
     guard let users = context.message?.newChatMembers else { return false }
