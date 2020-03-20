@@ -17,8 +17,6 @@ router["start"] = { context in
     return true
 }
 
-
-
 router[.newChatMembers] = { context in
     guard let users = context.message?.newChatMembers else { return false }
     for user in users {
